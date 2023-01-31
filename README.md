@@ -9,6 +9,9 @@ http://softpixelengine.sourceforge.net/index.html
 Using Wrapper from Blitz Basic. 3D and 2D routines.
 https://www.blitzcoder.org/forum/topic.php?id=138
 
+For examples, you need "media" dir from original package:
+http://softpixelengine.sourceforge.net/download/SoftPixelEngineWrapper.zip
+
 ![Imagen softpixel_1](https://github.com/jepalza/FB_SOFTPIXEL_ENGINE_3D/blob/main/pictures/softpixel1.jpg)
 ![Imagen softpixel_2](https://github.com/jepalza/FB_SOFTPIXEL_ENGINE_3D/blob/main/pictures/softpixel2.jpg)
 ![Imagen softpixel_3](https://github.com/jepalza/FB_SOFTPIXEL_ENGINE_3D/blob/main/pictures/softpixel3.jpg)
