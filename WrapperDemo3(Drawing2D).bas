@@ -10,7 +10,7 @@
 Graphics(800, 600, 32, 0)
 
 
-Var img = LoadImage("../media/SoftPixelEngineLogo.png")
+Var img = LoadImage("./media/SoftPixelEngineLogo.png")
 MaskImage(img, 0, 0, 0, 255)
 
 Dim As Single Angle = 0.0

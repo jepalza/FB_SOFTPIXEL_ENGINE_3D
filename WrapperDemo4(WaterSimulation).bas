@@ -39,27 +39,27 @@ TurnEntity(light, 45, 0, 0)
 CameraRange(cam, 0.1, 1000.0)
 
 ' Load all textures
-Var HeightMapFile	= "../media/HeightField.jpg"
+Var HeightMapFile	= "./media/HeightField.jpg"
 
 Var HeightMapTex	= LoadTexture(HeightMapFile)
-Var GroundTex		= LoadTexture("../media/Grass.jpg")
-Var DetailTex		= LoadTexture("../media/DetailTexture.jpg")
+Var GroundTex		= LoadTexture("./media/Grass.jpg")
+Var DetailTex		= LoadTexture("./media/DetailTexture.jpg")
 
-Var SkyTexBack		= LoadTexture("../media/sky_north.jpg", 48)
-Var SkyTexFront		= LoadTexture("../media/sky_south.jpg", 48)
-Var SkyTexTop		= LoadTexture("../media/sky_up.jpg", 48)
-Var SkyTexBottom	= LoadTexture("../media/sky_down.jpg", 48)
-Var SkyTexLeft		= LoadTexture("../media/sky_west.jpg", 48)
-Var SkyTexRight		= LoadTexture("../media/sky_east.jpg", 48)
+Var SkyTexBack		= LoadTexture("./media/sky_north.jpg", 48)
+Var SkyTexFront		= LoadTexture("./media/sky_south.jpg", 48)
+Var SkyTexTop		= LoadTexture("./media/sky_up.jpg", 48)
+Var SkyTexBottom	= LoadTexture("./media/sky_down.jpg", 48)
+Var SkyTexLeft		= LoadTexture("./media/sky_west.jpg", 48)
+Var SkyTexRight		= LoadTexture("./media/sky_east.jpg", 48)
 
 Dim Shared as integer RefractionMap	
 RefractionMap= CreateTexture(ScrWidth, ScrHeight, 1)
 Dim Shared as integer ReflectionMap	
 ReflectionMap= CreateTexture(ScrWidth, ScrHeight, 1)
 Dim Shared as Integer BumpMap			
-BumpMap= LoadTexture("../media/WaterBumpMap.jpg")
+BumpMap= LoadTexture("./media/WaterBumpMap.jpg")
 Dim Shared as integer WaterSurfaceMap
-WaterSurfaceMap= LoadTexture("../media/WaterSurface.jpg")
+WaterSurfaceMap= LoadTexture("./media/WaterSurface.jpg")
 
 Var HeightMapWidth  = TextureWidth(HeightMapTex)
 Var HeightMapHeight = TextureHeight(HeightMapTex)
@@ -88,7 +88,7 @@ EntityTexture(ground, GroundTex, 0, 0)
 EntityTexture(ground, DetailTex, 0, 1)
 
 ' Create a house
-Var house = LoadMesh("../media/dom.3ds")
+Var house = LoadMesh("./media/dom.3ds")
 PositionEntity(house, 20, 4.5, -20)
 RotateEntity(house, 0, 80, 0)
 
@@ -120,9 +120,9 @@ Var WaterShaderTable = CreateShaderTable()
 '   Version, EntryPoint (only for DirectX's HLSL)
 ' }
 Dim Shared as integer WaterVertexShader 
-WaterVertexShader= LoadShader(WaterShaderTable, SHADER_VERTEX, GLSL_VERSION_1_20, "../media/ShaderWaterVert.txt", "")
+WaterVertexShader= LoadShader(WaterShaderTable, SHADER_VERTEX, GLSL_VERSION_1_20, "./media/ShaderWaterVert.txt", "")
 Dim Shared as integer WaterPixelShader 
-WaterPixelShader= LoadShader(WaterShaderTable, SHADER_PIXEL, GLSL_VERSION_1_20, "../media/ShaderWaterFrag.txt", "")
+WaterPixelShader= LoadShader(WaterShaderTable, SHADER_PIXEL, GLSL_VERSION_1_20, "./media/ShaderWaterFrag.txt", "")
 
 ' Link (or rather compile) the whole shader table
 ShaderTableLink(WaterShaderTable)

@@ -33,7 +33,7 @@ Var light = CreateLight()
 Var obj = CreateCube()
 ScaleEntity(obj, 2, 0.75, 2)
 
-Var tex = LoadTexture("../media/SoftPixelEngineLogo.png")
+Var tex = LoadTexture("./media/SoftPixelEngineLogo.png")
 EntityTexture(obj, tex)
 
 Var img = CreateImage(GraphicsWidth(), GraphicsHeight())
@@ -46,12 +46,12 @@ Var VertexShader=0
 Var PixelShader=0
 If VideoDriver() = 2 Then
 	' Load DirectX shader (HLSL). The last parameter is the main function names for the vertex- and pixel shader.
-	VertexShader = LoadShader(ShaderTable, SHADER_VERTEX, HLSL_VERTEX_2_0, "../media/ShaderLibHLSL.txt", "VertexMain")
-	PixelShader  = LoadShader(ShaderTable, SHADER_PIXEL, HLSL_PIXEL_2_0, "../media/ShaderLibHLSL.txt", "PixelMain")
+	VertexShader = LoadShader(ShaderTable, SHADER_VERTEX, HLSL_VERTEX_2_0, "./media/ShaderLibHLSL.txt", "VertexMain")
+	PixelShader  = LoadShader(ShaderTable, SHADER_PIXEL, HLSL_PIXEL_2_0, "./media/ShaderLibHLSL.txt", "PixelMain")
 ElseIf VideoDriver() = 1 Then 
 	' Load OpenGL shader (GLSL). The last parameter can be empty ("") because in GLSL there are no entry points.
-	VertexShader = LoadShader(ShaderTable, SHADER_VERTEX, GLSL_VERSION_1_20, "../media/ShaderLibVert.txt", "")
-	PixelShader  = LoadShader(ShaderTable, SHADER_PIXEL, GLSL_VERSION_1_20, "../media/ShaderLibFrag.txt", "")
+	VertexShader = LoadShader(ShaderTable, SHADER_VERTEX, GLSL_VERSION_1_20, "./media/ShaderLibVert.txt", "")
+	PixelShader  = LoadShader(ShaderTable, SHADER_PIXEL, GLSL_VERSION_1_20, "./media/ShaderLibFrag.txt", "")
 Else
 	' The "Ray" Software Renderer does not support any shaders!
 	VertexShader = 0

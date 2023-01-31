@@ -15,15 +15,15 @@ PositionEntity(cam, 0, 0, -3)
 
 Var obj = CreateCube()
 
-Var tex = LoadTexture("../media/SoftPixelEngineLogo.png")
+Var tex = LoadTexture("./media/SoftPixelEngineLogo.png")
 EntityTexture(obj, tex)
 
 ' Create the shader table to combine several shaders
 Var ShaderTable  = CreateShaderTable()
 
 ' Load the vertex- and pixel shader
-Var VertexShader = LoadShader(ShaderTable, SHADER_VERTEX, GLSL_VERSION_1_20, "../media/ShaderTestVert.txt", "")
-Var PixelShader  = LoadShader(ShaderTable, SHADER_PIXEL, GLSL_VERSION_1_20, "../media/ShaderTestFrag.txt", "")
+Var VertexShader = LoadShader(ShaderTable, SHADER_VERTEX, GLSL_VERSION_1_20, "./media/ShaderTestVert.txt", "")
+Var PixelShader  = LoadShader(ShaderTable, SHADER_PIXEL, GLSL_VERSION_1_20, "./media/ShaderTestFrag.txt", "")
 
 ' Link (or rather combine) the shaders
 ShaderTableLink(ShaderTable)

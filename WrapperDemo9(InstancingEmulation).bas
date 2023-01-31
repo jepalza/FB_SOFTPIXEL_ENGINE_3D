@@ -29,11 +29,11 @@ Var Lit = CreateLight()
 RotateEntity(Lit, 25, 25, 0)
 
 ' Load our animated model
-Var obj = LoadMD2("../media/dragon.md2")
+Var obj = LoadMD2("./media/dragon.md2")
 ScaleEntity(Obj, 0.1, 0.1, 0.1)
 RotateEntity(Obj, 0, 180, 0)
 
-Var tex = LoadTexture("../media/dragon.bmp")
+Var tex = LoadTexture("./media/dragon.bmp")
 EntityTexture(Obj, Tex)
 
 ' Animate the model
